@@ -41,5 +41,5 @@ To get started with the Attendance Log Manager, follow these steps:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/yourusername/attendance-log-manager.git
-cd attendance-log-manager
+https://github.com/Francis0707/attendance_log.git
+cd attendance_log
