@@ -10,7 +10,6 @@ The **Attendance Log Manager** is a simple and efficient Rust-based application 
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
