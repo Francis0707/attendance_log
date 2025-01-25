@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Log Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        h1 {
+            color: #2d87f0;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #555;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 20px;
+        }
+        ul {
+            text-align: left;
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2d87f0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Attendance Log Manager</h1>
+        <p>The Attendance Log Manager is a simple and effective solution for managing employee attendance. Whether you run a small business or a large organization, this tool helps you streamline attendance tracking efficiently.</p>
+
+        <h2>Why Use Attendance Log Manager?</h2>
+        <ul>
+            <li>Track employee clock-ins and clock-outs effortlessly.</li>
+            <li>Access detailed logs to monitor work hours.</li>
+            <li>Ensure accountability and boost productivity.</li>
+            <li>Store attendance data securely in JSON files.</li>
+        </ul>
+
+        <h2>How to Install and Use</h2>
+        <div class="instructions">
+            <h3>Installation</h3>
+            <ol>
+                <li>Ensure you have Rust installed. If not, download it from <a href="https://www.rust-lang.org/tools/install" target="_blank">Rust's official site</a>.</li>
+                <li>Clone the repository to your local machine:
+                    <pre><code>git clone https://github.com/your-repo/attendance-log-manager.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd attendance-log-manager</code></pre>
+                </li>
+                <li>Build the project:
+                    <pre><code>cargo build</code></pre>
+                </li>
+                <li>Run the application:
+                    <pre><code>cargo run</code></pre>
+                </li>
+            </ol>
+
+            <h3>Usage</h3>
+            <ol>
+                <li>Upon running the application, you will see a menu with the following options:</li>
+                <ul>
+                    <li><strong>Clock In:</strong> Enter your employee ID to clock in.</li>
+                    <li><strong>Clock Out:</strong> Use your employee ID to clock out.</li>
+                    <li><strong>View Logs:</strong> Check attendance logs for any employee ID.</li>
+                    <li><strong>Exit:</strong> Exit the application safely.</li>
+                </ul>
+                <li>Logs are automatically saved in the <code>logs</code> directory as JSON files.</li>
+                <li>To view logs manually, navigate to the <code>logs</code> folder in the project directory.</li>
+            </ol>
+        </div>
+
+        <h2>Get Started Today!</h2>
+        <p>Download the Attendance Log Manager and start simplifying your attendance tracking process. <br>
+        For any questions, feel free to contact us at <a href="mailto:support@attendancelog.com">support@attendancelog.com</a>.</p>
+    </div>
+</body>
+</html>
