@@ -8,7 +8,6 @@ The **Attendance Log Manager** is a simple and efficient Rust-based application 
 - [Why Use Attendance Log Manager](#why-use-attendance-log-manager)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
 
 ---
 
