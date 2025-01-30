@@ -5,98 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Log Manager</title>
     <style>
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #fbc2eb);
-            background-size: 300% 300%;
-            animation: gradientAnimation 8s ease infinite;
+            background-color: #f9f9f9;
             color: #333;
         }
-        .container {
+
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
             text-align: center;
-            background: #fff;
-            padding: 30px 50px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
             max-width: 800px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1s ease-in-out;
+            margin: 2rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .container.visible {
-            opacity: 1;
-            transform: translateY(0);
+
+        h1, h2, h3 {
+            color: #4CAF50;
         }
-        h1 { color: #ff4081; margin-bottom: 15px; }
-        h2 { margin-top: 20px; color: #007bff; }
-        p { line-height: 1.8; }
-        .btn {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            padding: 12px 25px;
-            margin: 10px;
+
+        ul {
+            margin: 1rem 0;
+            padding: 0 1.5rem;
+        }
+
+        .instructions {
+            background: #f1f1f1;
+            padding: 1rem;
+            border-left: 4px solid #4CAF50;
+            margin: 1.5rem 0;
             border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s;
         }
-        .btn:hover { transform: scale(1.1); }
-        .faq-section {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .faq-question {
-            font-weight: bold;
-            cursor: pointer;
-            margin: 10px 0;
-        }
-        .faq-answer {
-            display: none;
-            padding-left: 15px;
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #4CAF50;
+            color: white;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
-    <div class="container" id="content">
-        <h1>Welcome to the Attendance Log Manager</h1>
-        <p>The Attendance Log Manager helps you efficiently track employee attendance with ease.</p>
-        
-        <h2>Download</h2>
-        <a href="#" class="btn" download>Download for Linux (x86_64)</a>
-        <a href="#" class="btn" download>Download for Linux (ARM64)</a>
-        
-        <h2>FAQ</h2>
-        <div class="faq-section">
-            <p class="faq-question">▶ How do I install it?</p>
-            <p class="faq-answer">You can install it by cloning the repository and running `cargo build`.</p>
-            <p class="faq-question">▶ Where are logs stored?</p>
-            <p class="faq-answer">Logs are stored in the `logs` directory in JSON format.</p>
+
+<header>
+    <h1>Attendance Log Manager</h1>
+    <p>Streamline employee attendance tracking with ease!</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>Why Use Attendance Log Manager?</h2>
+        <p>The Attendance Log Manager is a simple and effective application designed to help businesses track employee attendance seamlessly. Here are some benefits:</p>
+        <ul>
+            <li><strong>Efficiency:</strong> Easily track clock-in and clock-out times for employees.</li>
+            <li><strong>Accountability:</strong> Keep accurate attendance records to avoid disputes.</li>
+            <li><strong>Automation:</strong> Automatically save logs in JSON format for future reference.</li>
+            <li><strong>Cross-Platform:</strong> The application works on both Windows and Linux systems.</li>
+            <li><strong>Lightweight:</strong> Minimal resource usage with quick setup.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Installation Instructions</h2>
+        <p>Follow these steps to install and use the Attendance Log Manager:</p>
+        <div class="instructions">
+            <h3>1. Prerequisites</h3>
+            <ul>
+                <li>Ensure Rust is installed on your system. You can install it by running:</li>
+                <pre><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></pre>
+                <li>Ensure you have basic command-line knowledge to navigate and run commands.</li>
+            </ul>
+
+            <h3>2. Download the Application</h3>
+            <ul>
+                <li>Clone or download the project from the repository:</li>
+                <pre><code>git clone https://github.com/your-repo/attendance-log-manager.git</code></pre>
+                <li>Navigate to the project directory:</li>
+                <pre><code>cd attendance-log-manager</code></pre>
+            </ul>
+
+            <h3>3. Build and Run</h3>
+            <ul>
+                <li>Build the application using the Rust Cargo tool:</li>
+                <pre><code>cargo build</code></pre>
+                <li>Run the application in development mode:</li>
+                <pre><code>cargo run</code></pre>
+            </ul>
+
+            <h3>4. Using the Application</h3>
+            <ul>
+                <li>When prompted, choose an option from the menu:</li>
+                <ul>
+                    <li><strong>1. Clock In:</strong> Enter your employee ID to log your clock-in time.</li>
+                    <li><strong>2. Clock Out:</strong> Enter your employee ID to log your clock-out time.</li>
+                    <li><strong>3. View Logs:</strong> View the attendance history for your employee ID.</li>
+                    <li><strong>4. Exit:</strong> Close the application.</li>
+                </ul>
+            </ul>
         </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("content").classList.add("visible");
-        });
-        
-        document.querySelectorAll(".faq-question").forEach(item => {
-            item.addEventListener("click", () => {
-                const answer = item.nextElementSibling;
-                answer.style.display = answer.style.display === "block" ? "none" : "block";
-            });
-        });
-    </script>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+        <p>The Attendance Log Manager offers:</p>
+        <ul>
+            <li>Employee-specific logs stored in JSON format.</li>
+            <li>Automatic creation of a "logs" folder for record keeping.</li>
+            <li>User-friendly menu-driven interface.</li>
+            <li>Error handling for duplicate clock-ins or missing clock-outs.</li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Attendance Log Manager. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
