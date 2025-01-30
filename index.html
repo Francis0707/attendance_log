@@ -5,113 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Log Manager</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffa9c0, #ffdbdb);
-            color: #333;
-            animation: fadeIn 1.5s ease-in-out;
+            height: 100vh;
+            background-color: #f4f4f9;
         }
         .container {
-            text-align: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             max-width: 800px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .container:hover {
-            transform: scale(1.03);
+            margin: 0 auto;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
         }
         h1 {
-            color: #ff4081;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        h2 {
-            margin-top: 20px;
-            color: #007bff;
-            font-weight: 500;
+            color: #333;
         }
         p {
-            line-height: 1.8;
-            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
         }
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #007bff, #00c6ff);
-            color: #fff;
-            padding: 14px 28px;
-            margin: 10px;
-            border-radius: 50px;
+        a {
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-            font-size: 1em;
+            color: #ffffff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 5px;
         }
-        .btn:hover {
-            background: linear-gradient(135deg, #0056b3, #0099ff);
-            transform: scale(1.1);
-        }
-        .faq {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .faq h3 {
-            cursor: pointer;
-            background: #f8f9fa;
-            padding: 12px;
-            border-radius: 10px;
-            transition: background 0.3s;
-            font-weight: 500;
-        }
-        .faq h3:hover {
-            background: #e2e6ea;
-        }
-        .faq p {
-            display: none;
-            padding: 12px;
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        a:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Attendance Log Manager</h1>
-        <p>The Attendance Log Manager is a simple and effective solution for managing employee attendance efficiently.</p>
+        <h1>Welcome to Attendance Log Manager</h1>
+        <p>The Attendance Log Manager is a lightweight and efficient tool designed to manage employee attendance seamlessly. With features like clocking in, clocking out, and viewing attendance logs, it's the perfect solution for small to medium-sized businesses.</p>
+        
+        <h2>Why Use Attendance Log Manager?</h2>
+        <ul>
+            <li>Simple and easy-to-use interface.</li>
+            <li>Efficient tracking of employee attendance.</li>
+            <li>Cross-platform support for Linux, Windows, and macOS.</li>
+            <li>Reliable local storage using JSON files.</li>
+        </ul>
 
         <h2>Download</h2>
-        <a href="#" class="btn">Download for Linux (x86_64)</a>
-        <a href="#" class="btn">Download for Linux (ARM64)</a>
-        
-        <h2>FAQ</h2>
-        <div class="faq">
-            <h3 onclick="toggleFAQ(this)">How do I install the software?</h3>
-            <p>Download the file, extract it, and follow the installation guide.</p>
-            
-            <h3 onclick="toggleFAQ(this)">Is my data secure?</h3>
-            <p>Yes, all data is stored securely in encrypted JSON files.</p>
-        </div>
+        <p>Select your operating system below to download the latest version:</p>
+        <a href="binaries/attendance_log_manager_windows.exe" download>Download for Windows</a>
+        <a href="binaries/attendance_log_manager_linux" download>Download for Linux</a>
+        <a href="binaries/attendance_log_manager_mac" download>Download for macOS</a>
+
+        <h2>How to Install</h2>
+        <ol>
+            <li>Download the appropriate binary for your operating system.</li>
+            <li>Ensure the binary has execute permissions (for Linux/macOS: <code>chmod +x attendance_log_manager_linux</code>).</li>
+            <li>Run the binary directly from your terminal or file explorer.</li>
+        </ol>
+
+        <h2>How to Use</h2>
+        <ol>
+            <li>Launch the application.</li>
+            <li>Choose an option from the menu: Clock In, Clock Out, View Logs, or Exit.</li>
+            <li>Follow the on-screen prompts to manage your attendance logs.</li>
+        </ol>
+
+        <p>For more details, visit our <a href="https://github.com/yourusername/attendance-log-manager">GitHub Repository</a>.</p>
     </div>
-    
-    <script>
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            answer.style.display = answer.style.display === "block" ? "none" : "block";
-        }
-    </script>
 </body>
 </html>
