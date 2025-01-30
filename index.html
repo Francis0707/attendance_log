@@ -7,131 +7,108 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
             color: #333;
         }
-
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
         .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 2rem auto;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        h1, h2, h3 {
-            color: #4CAF50;
-        }
-
-        ul {
-            margin: 1rem 0;
-            padding: 0 1.5rem;
-        }
-
-        .instructions {
-            background: #f1f1f1;
-            padding: 1rem;
-            border-left: 4px solid #4CAF50;
-            margin: 1.5rem 0;
-            border-radius: 5px;
-        }
-
-        footer {
             text-align: center;
-            padding: 1rem 0;
-            background: #4CAF50;
-            color: white;
-            margin-top: 2rem;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        h1 {
+            color: #2d87f0;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 20px;
+            color: #555;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .instructions {
+            text-align: left;
+            margin-top: 20px;
+        }
+        ul {
+            text-align: left;
+            margin: 10px 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #2d87f0;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to the Attendance Log Manager</h1>
+        <p>The Attendance Log Manager is a simple and effective solution for managing employee attendance. Whether you run a small business or a large organization, this tool helps you streamline attendance tracking efficiently.</p>
 
-<header>
-    <h1>Attendance Log Manager</h1>
-    <p>Streamline employee attendance tracking with ease!</p>
-</header>
-
-<div class="container">
-    <section>
         <h2>Why Use Attendance Log Manager?</h2>
-        <p>The Attendance Log Manager is a simple and effective application designed to help businesses track employee attendance seamlessly. Here are some benefits:</p>
         <ul>
-            <li><strong>Efficiency:</strong> Easily track clock-in and clock-out times for employees.</li>
-            <li><strong>Accountability:</strong> Keep accurate attendance records to avoid disputes.</li>
-            <li><strong>Automation:</strong> Automatically save logs in JSON format for future reference.</li>
-            <li><strong>Cross-Platform:</strong> The application works on both Windows and Linux systems.</li>
-            <li><strong>Lightweight:</strong> Minimal resource usage with quick setup.</li>
+            <li>Track employee clock-ins and clock-outs effortlessly.</li>
+            <li>Access detailed logs to monitor work hours.</li>
+            <li>Ensure accountability and boost productivity.</li>
+            <li>Store attendance data securely in JSON files.</li>
         </ul>
-    </section>
 
-    <section>
-        <h2>Installation Instructions</h2>
-        <p>Follow these steps to install and use the Attendance Log Manager:</p>
+        <h2>Download</h2>
+        <p>Select your operating system below to download the latest version:</p>
+        <a href="https://github.com/Francis0707/attendance_log/archive/refs/tags/v1.0.0.tar.gz" download>Download for Linux (x86_64)</a>
+        <a href="https://github.com/Francis0707/attendance_log/archive/refs/tags/v1.0.0.zip" download>Download for Linux (ARM64)</a>
+        
+        <h2>How to Install and Use</h2>
         <div class="instructions">
-            <h3>1. Prerequisites</h3>
-            <ul>
-                <li>Ensure Rust is installed on your system. You can install it by running:</li>
-                <pre><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</code></pre>
-                <li>Ensure you have basic command-line knowledge to navigate and run commands.</li>
-            </ul>
+            <h3>Installation</h3>
+            <ol>
+                <li>Ensure you have Rust installed. If not, download it from <a href="https://www.rust-lang.org/tools/install" target="_blank">Rust's official site</a>.</li>
+                <li>Clone the repository to your local machine:
+                    <pre><code>git clone https://github.com/Francis0707/attendance_log.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd attendance_log</code></pre>
+                </li>
+                <li>Build the project:
+                    <pre><code>cargo build</code></pre>
+                </li>
+                <li>Run the application:
+                    <pre><code>cargo run</code></pre>
+                </li>
+            </ol>
 
-            <h3>2. Download the Application</h3>
-            <ul>
-                <li>Clone or download the project from the repository:</li>
-                <pre><code>git clone https://github.com/your-repo/attendance-log-manager.git</code></pre>
-                <li>Navigate to the project directory:</li>
-                <pre><code>cd attendance-log-manager</code></pre>
-            </ul>
-
-            <h3>3. Build and Run</h3>
-            <ul>
-                <li>Build the application using the Rust Cargo tool:</li>
-                <pre><code>cargo build</code></pre>
-                <li>Run the application in development mode:</li>
-                <pre><code>cargo run</code></pre>
-            </ul>
-
-            <h3>4. Using the Application</h3>
-            <ul>
-                <li>When prompted, choose an option from the menu:</li>
+            <h3>Usage</h3>
+            <ol>
+                <li>Upon running the application, you will see a menu with the following options:</li>
                 <ul>
-                    <li><strong>1. Clock In:</strong> Enter your employee ID to log your clock-in time.</li>
-                    <li><strong>2. Clock Out:</strong> Enter your employee ID to log your clock-out time.</li>
-                    <li><strong>3. View Logs:</strong> View the attendance history for your employee ID.</li>
-                    <li><strong>4. Exit:</strong> Close the application.</li>
+                    <li><strong>Clock In:</strong> Enter your employee ID to clock in.</li>
+                    <li><strong>Clock Out:</strong> Use your employee ID to clock out.</li>
+                    <li><strong>View Logs:</strong> Check attendance logs for any employee ID.</li>
+                    <li><strong>Exit:</strong> Exit the application safely.</li>
                 </ul>
-            </ul>
+                <li>Logs are automatically saved in the <code>logs</code> directory as JSON files.</li>
+                <li>To view logs manually, navigate to the <code>logs</code> folder in the project directory.</li>
+            </ol>
         </div>
-    </section>
 
-    <section>
-        <h2>Features</h2>
-        <p>The Attendance Log Manager offers:</p>
-        <ul>
-            <li>Employee-specific logs stored in JSON format.</li>
-            <li>Automatic creation of a "logs" folder for record keeping.</li>
-            <li>User-friendly menu-driven interface.</li>
-            <li>Error handling for duplicate clock-ins or missing clock-outs.</li>
-        </ul>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2025 Attendance Log Manager. All rights reserved.</p>
-</footer>
-
+        <h2>Get Started Today!</h2>
+        <p>Download the Attendance Log Manager and start simplifying your attendance tracking process. <br>
+        For any questions, feel free to open an <a href="https://github.com/Francis0707/attendance_log/issues">issue</a>.</p>
+    </div>
 </body>
 </html>
