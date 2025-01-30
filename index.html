@@ -15,50 +15,51 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1, #a1c4fd, #c2e9fb);
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffa9c0, #ffdbdb);
             color: #333;
             animation: fadeIn 1.5s ease-in-out;
         }
         .container {
             text-align: center;
-            background: linear-gradient(135deg, #ffffff, #f8f9fa);
-            padding: 30px 50px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             max-width: 800px;
             transition: transform 0.3s ease-in-out;
         }
         .container:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
         h1 {
             color: #ff4081;
             margin-bottom: 15px;
+            font-weight: 600;
         }
         h2 {
             margin-top: 20px;
             color: #007bff;
+            font-weight: 500;
         }
         p {
             line-height: 1.8;
-            color: #444;
+            font-size: 1.1em;
         }
         .btn {
             display: inline-block;
             background: linear-gradient(135deg, #007bff, #00c6ff);
             color: #fff;
-            padding: 12px 25px;
+            padding: 14px 28px;
             margin: 10px;
-            border-radius: 25px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+            font-size: 1em;
         }
         .btn:hover {
-            background: linear-gradient(135deg, #0056b3, #0084ff);
+            background: linear-gradient(135deg, #0056b3, #0099ff);
             transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5);
         }
         .faq {
             margin-top: 20px;
@@ -66,21 +67,20 @@
         }
         .faq h3 {
             cursor: pointer;
-            background: linear-gradient(135deg, #ffdde1, #ff9a9e);
+            background: #f8f9fa;
             padding: 12px;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: background 0.3s;
-            color: #333;
+            font-weight: 500;
         }
         .faq h3:hover {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: #fff;
+            background: #e2e6ea;
         }
         .faq p {
             display: none;
-            padding: 10px;
+            padding: 12px;
             background: #f1f1f1;
-            border-radius: 5px;
+            border-radius: 10px;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
