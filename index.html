@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Log Manager</title>
     <style>
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -13,7 +19,9 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #fbc2eb);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s ease infinite;
             color: #333;
         }
         .container {
@@ -23,29 +31,17 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             max-width: 800px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-in-out;
         }
-        h1 {
-            color: #ff4081;
-            margin-bottom: 15px;
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        h2 {
-            margin-top: 20px;
-            color: #007bff;
-        }
-        p {
-            line-height: 1.8;
-        }
-        .instructions {
-            text-align: left;
-            margin-top: 20px;
-        }
-        ul {
-            text-align: left;
-            margin: 10px 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
+        h1 { color: #ff4081; margin-bottom: 15px; }
+        h2 { margin-top: 20px; color: #007bff; }
+        p { line-height: 1.8; }
         .btn {
             display: inline-block;
             background: #007bff;
@@ -55,74 +51,52 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            transition: transform 0.3s;
         }
-        .btn:hover {
-            background: #0056b3;
+        .btn:hover { transform: scale(1.1); }
+        .faq-section {
+            margin-top: 20px;
+            text-align: left;
         }
-        a {
-            color: #ff4081;
-            text-decoration: none;
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 0;
         }
-        a:hover {
-            text-decoration: underline;
+        .faq-answer {
+            display: none;
+            padding-left: 15px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="content">
         <h1>Welcome to the Attendance Log Manager</h1>
-        <p>The Attendance Log Manager is a simple and effective solution for managing employee attendance. Whether you run a small business or a large organization, this tool helps you streamline attendance tracking efficiently.</p>
-
-        <h2>Why Use Attendance Log Manager?</h2>
-        <ul>
-            <li>Track employee clock-ins and clock-outs effortlessly.</li>
-            <li>Access detailed logs to monitor work hours.</li>
-            <li>Ensure accountability and boost productivity.</li>
-            <li>Store attendance data securely in JSON files.</li>
-        </ul>
-
-        <h2>Download</h2>
-        <p>Select your operating system below to download the latest version:</p>
-        <a href="https://github.com/Francis0707/attendance_log/archive/refs/tags/v1.0.0.tar.gz" class="btn" download>Download for Linux (x86_64)</a>
-        <a href="https://github.com/Francis0707/attendance_log/archive/refs/tags/v1.0.0.zip" class="btn" download>Download for Linux (ARM64)</a>
+        <p>The Attendance Log Manager helps you efficiently track employee attendance with ease.</p>
         
-        <h2>How to Install and Use</h2>
-        <div class="instructions">
-            <h3>Installation</h3>
-            <ol>
-                <li>Ensure you have Rust installed. If not, download it from <a href="https://www.rust-lang.org/tools/install" target="_blank">Rust's official site</a>.</li>
-                <li>Clone the repository to your local machine:
-                    <pre><code>git clone https://github.com/Francis0707/attendance_log.git</code></pre>
-                </li>
-                <li>Navigate to the project directory:
-                    <pre><code>cd attendance_log</code></pre>
-                </li>
-                <li>Build the project:
-                    <pre><code>cargo build</code></pre>
-                </li>
-                <li>Run the application:
-                    <pre><code>cargo run</code></pre>
-                </li>
-            </ol>
-
-            <h3>Usage</h3>
-            <ol>
-                <li>Upon running the application, you will see a menu with the following options:</li>
-                <ul>
-                    <li><strong>Clock In:</strong> Enter your employee ID to clock in.</li>
-                    <li><strong>Clock Out:</strong> Use your employee ID to clock out.</li>
-                    <li><strong>View Logs:</strong> Check attendance logs for any employee ID.</li>
-                    <li><strong>Exit:</strong> Exit the application safely.</li>
-                </ul>
-                <li>Logs are automatically saved in the <code>logs</code> directory as JSON files.</li>
-                <li>To view logs manually, navigate to the <code>logs</code> folder in the project directory.</li>
-            </ol>
+        <h2>Download</h2>
+        <a href="#" class="btn" download>Download for Linux (x86_64)</a>
+        <a href="#" class="btn" download>Download for Linux (ARM64)</a>
+        
+        <h2>FAQ</h2>
+        <div class="faq-section">
+            <p class="faq-question">▶ How do I install it?</p>
+            <p class="faq-answer">You can install it by cloning the repository and running `cargo build`.</p>
+            <p class="faq-question">▶ Where are logs stored?</p>
+            <p class="faq-answer">Logs are stored in the `logs` directory in JSON format.</p>
         </div>
-
-        <h2>Get Started Today!</h2>
-        <p>Download the Attendance Log Manager and start simplifying your attendance tracking process. <br>
-        For any questions, feel free to open an <a href="https://github.com/Francis0707/attendance_log/issues">issue</a>.</p>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("content").classList.add("visible");
+        });
+        
+        document.querySelectorAll(".faq-question").forEach(item => {
+            item.addEventListener("click", () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
 </body>
 </html>
